@@ -10,7 +10,8 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "api": "json-server api/data.json --port 8888",
-    "deploy": "gh-pages -d dist"
+    "pregh": "npm run build",
+    "gh": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
